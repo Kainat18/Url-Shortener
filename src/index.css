@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100%;
+  background: linear-gradient(#141e30, #243b55);
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.Shortened-Url {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  border-radius: 15px;
+  padding: 25px;
+  width: 700px;
+  height: auto;
+  font-family: Poppins, sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.fa-solid.fa-link {
+  font-size: 25px;
+}
+
+.input-tag {
+  width: 370px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(236, 233, 233);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  font-size: 16px;
+  margin: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  background: transparent;
+  color: #f5f5f5;
+}
+
+.shortened-btn {
+  background: transparent;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 10px 30px;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+}
+
+.shortened-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    320deg,
+    rgba(0, 140, 255, 0.678),
+    rgba(128, 0, 128, 0.308)
+  );
+  z-index: 1;
+  transition: background 3s;
+}
+
+.shortened-btn:hover::before {
+  animation: rotate 1s;
+  transition: all 0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.ShortenedUrl-container {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dotted rgb(190, 189, 189);
+  padding: 10px;
+  border-radius: 10px;
+  gap: 20px;
+  height: 60px;
+  width: 370px;
+  margin-top: 30px;
+  background-color: transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+}
+.ShortenedUrl-container > p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-family: "Ruluko", sans-serif;
+}
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  background-color: transparent;
+  border-image: linear-gradient(
+    320deg,
+    rgba(0, 140, 255, 0.678),
+    rgba(128, 0, 128, 0.308)
+  );
+  border-image-slice: 1;
+  background-clip: padding-box;
+}
+.fa-solid.fa-copy {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  background-image: linear-gradient(
+    320deg,
+    rgba(0, 140, 255, 0.678),
+    rgba(128, 0, 128, 0.308)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.text {
+  position: absolute;
+  right: -10%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+/* hover effect on button width */
+.copy-btn:hover {
+  width: 110px;
+  transition-duration: 0.3s;
+}
+.copy-btn:hover .fa-solid.fa-copy {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 10px;
+}
+/* hover effect button's text */
+.copy-btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.copy-btn:active {
+  transform: translate(2px, 2px);
+}
+
+.center-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.loader-circle-9 {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 3px solid #3c3c3c;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 50px;
+  font-family: sans-serif;
+  font-size: 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.loader-circle-9:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid rgba(0, 140, 255, 0.678);
+  border-right: 3px solid rgba(0, 140, 255, 0.678);
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+.loader-circle-9 span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.loader-circle-9 span:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(0, 140, 255, 0.678);
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.678);
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+.savedUrls-container {
+  width: 100%;
+  height: auto;
+  background: transparent;
+  margin-top: 40px;
+  font-family: "Poppins", serif;
+}
+.savedUrls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  padding: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+}
+.savedUrls h2 {
+  margin: 5px;
+}
+.savedUrls ul {
+  list-style: none;
+  padding: 0;
+}
+
+.savedUrls li {
+  margin-bottom: 5px;
+}
+.ClearStorage-btn {
+  background: linear-gradient(
+    320deg,
+    rgba(0, 140, 255, 0.678),
+    rgba(128, 0, 128, 0.308)
+  );
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 10px 30px;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 420px) {
+  .Shortened-Url {
+    width: 380px;
+    height: 470px;
+    margin: 20px;
+  }
+  .input-tag {
+    width: 330px;
+  }
+  .shortened-btn {
+    width: 350px;
+  }
+  .ShortenedUrl-container {
+    height: 50px;
+    width: 340px;
+  }
+}
