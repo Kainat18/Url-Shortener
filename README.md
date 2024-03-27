@@ -52,12 +52,14 @@ The URL Shortener Project is a web application designed to shorten long URLs int
 
 
 <details>
-<summary><h3> 📸 - Demo Video </h3></summary>
+<summary><h3> 🎥 - Demo Video </h3></summary>
 
 #
 
-![preview](./public/URL%20Shortener%20-%20Personal%20-%20Microsoft​%20Edge%202024-03-27%2023-03-19.mp4)
-
+<video width="500" height="500" controls>
+  <source src="./public/URL Shortener - Personal - Microsoft​ Edge 2024-03-27 23-03-19.mp4" type="video/mp4">
+ 
+</video>
 </details>
 
 <details>
