@@ -34,11 +34,11 @@ function ShortenedUrl() {
       setSavedUrls(JSON.parse(storedUrls));
     }
   };
-  
-  const clearLocalStorage =() => {
+
+  const clearLocalStorage = () => {
     localStorage.removeItem("savedUrls");
     setSavedUrls([]);
-  }
+  };
   const shortenUrl = () => {
     if (!url.trim()) {
       toast.error("Please enter a URL.");
@@ -47,7 +47,7 @@ function ShortenedUrl() {
     const isValidUrl = validateUrl(url);
 
     if (!isValidUrl) {
-      toast.error("enter a valid url");
+      toast.error("Invalid url format");
       setUrl("");
       return;
     }
@@ -78,16 +78,17 @@ function ShortenedUrl() {
   }, []);
 
   const copyToClipoard = () => {
-    if(shortenedUrl) {
-    navigator.clipboard
-      .writeText(shortenedUrl)
-      .then(() =>
-        toast.success(`Copied clipboard to clipboard , ${shortenedUrl}`)
-      )
-      .catch((err) => toast.error(`unable to copy to the clipboard, ${err}`));
-  } else{
-    toast.error("please wait for the shortened url to be generated");
-  }}
+    if (shortenedUrl) {
+      navigator.clipboard
+        .writeText(shortenedUrl)
+        .then(() =>
+          toast.success(`Copied clipboard to clipboard , ${shortenedUrl}`)
+        )
+        .catch((err) => toast.error(`unable to copy to the clipboard, ${err}`));
+    } else {
+      toast.error("please wait for the shortened url to be generated");
+    }
+  };
 
   return (
     <div className="Shortened-Url">
@@ -98,25 +99,39 @@ function ShortenedUrl() {
         onChange={(e) => setUrl(e.target.value)}
         className="input-tag"
       />
-      <button className="shortened-btn" onClick={shortenUrl}>
+      <button
+        className="shortened-btn"
+        onClick={shortenUrl}
+        aria-label="Shorten URL"
+      >
         Shorten URL
       </button>
-     
-      {shortenedUrl &&(
-      <div className="ShortenedUrl-container">
-        {loader ? <Loader/> : shortenedUrl && <p>{shortenedUrl}</p>}
-       
-        <button className="copy-btn" onClick={copyToClipoard}>
-          <i className="fa-solid fa-copy"></i>
-          <div className="text">Copy</div>
-        </button> 
-      </div>
+
+      {shortenedUrl && (
+        <div className="ShortenedUrl-container">
+          {loader ? <Loader /> : shortenedUrl && <p>{shortenedUrl}</p>}
+
+          <button
+            className="copy-btn"
+            onClick={copyToClipoard}
+            aria-label="Copy URL"
+          >
+            <i className="fa-solid fa-copy"></i>
+            <div className="text">Copy</div>
+          </button>
+        </div>
       )}
       <ToastContainer />
-        <SavedUrl savedUrls = {savedUrls} /> 
-        {savedUrls.length > 0 && (
-       <button onClick={clearLocalStorage} className="ClearStorage-btn">Clear Saved URLs</button> 
-       )}
+      <SavedUrl savedUrls={savedUrls} />
+      {savedUrls.length > 0 && (
+        <button
+          onClick={clearLocalStorage}
+          className="ClearStorage-btn"
+          aria-label="Clear Saved Url"
+        >
+          Clear Saved URLs
+        </button>
+      )}
     </div>
   );
 }
