@@ -57,7 +57,7 @@ The URL Shortener Project is a web application designed to shorten long URLs int
 #
 
 <video width="500" height="500" controls>
-  <source src="./public/URL Shortener - Personal - Microsoft​ Edge 2024-03-27 23-03-19.mp4" type="video/mp4">
+  <source src="./public/Url Shortener.mp4" type="video/mp4">
  
 </video>
 </details>
