@@ -1,8 +1,65 @@
-# React + Vite
+# URL Shortener Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Intro
+The URL Shortener Project is a web application designed to shorten long URLs into more concise and shareable links. It provides users with a convenient way to generate short links for easy sharing on various platforms.
 
-Currently, two official plugins are available:
+##  🛠️ Tech Stack
+- **Frontend**: `React.js`
+- **Styling**: `CSS`
+- **State Management**: `React Hooks (useState, useEffect)`
+- **API Integration**: `Fetch API` for interacting with the URL shortening service
+- **Notifications**: `React-Toastify` for displaying user notifications
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## 🚀 Features
+- Shorten long URLs into compact links.
+- Copy shortened URLs to the clipboard with a single click.
+- Save and manage shortened URLs locally using browser storage.
+- View previously saved URLs in the history section.
+- Clear saved URLs from the history.
+
+## 📝 Process
+1. **Planning**: Defined project requirements and user stories.
+2. **Design**: Created wireframes and UI mockups for the application.
+3. **Development**: Implemented frontend functionality using React.js and styled components with CSS.
+4. **Testing**: Conducted manual testing and debugging to ensure functionality and usability.
+5. **Deployment**: Deployed the application to a hosting platform for public access.
+
+## Learnings
+- Gain proficiency in React.js and React Hooks for frontend development.
+- Enhance understanding of API integration and asynchronous JavaScript.
+- Improve knowledge of browser storage mechanisms like LocalStorage.
+- Learned to use the React-Toastify library for displaying user notifications.
+
+## 🤔 How Can It Be Improved?
+- Implement server-side URL shortening for better security and reliability.
+- Enhance accessibility features for users with disabilities.
+- Optimize performance and loading times for improved user experience.
+- Add user authentication and account management functionality.
+
+## Running the Project
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd url-shortener`
+3. Install dependencies: `npm install`
+4. Set up environment variables:
+   - Create a `.env` file in the root directory.
+   - Add the following environment variables:
+     ```
+     VITE_API_KEY=your-api-key
+     VITE_BASE_URL=your-base-url
+     ```
+5. Start the development server: `npm start`
+
+
+<details>
+<summary><h3> 📸 - Demo Images </h3></summary>
+
+#
+
+![preview](./public/shortUrl.png)
+
+#
+
+![preview](./public/ShortenedUrl.png)
+
+</details>
