@@ -56,7 +56,8 @@ The URL Shortener Project is a web application designed to shorten long URLs int
 
 #
 
-<video src="https://github.com/Kainat18/Url-Shortener/assets/92010815/6eb8c4b6-096b-4d98-a857-b3cca7fac2df" controls="controls" style="max-width: 730px;">
+<video src="
+https://github.com/Kainat18/Url-Shortener/assets/92010815/af539d4e-5fa5-4e9b-8398-7364d6cfb95e" controls="controls" style="max-width: 730px;">
 </video>
 
 </details>
