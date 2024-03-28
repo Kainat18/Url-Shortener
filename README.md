@@ -19,11 +19,10 @@ The URL Shortener Project is a web application designed to shorten long URLs int
 - Clear saved URLs from the history.
 
 ## 📝 Process
-1. **Planning**: Defined project requirements and user stories.
-2. **Design**: Created wireframes and UI mockups for the application.
-3. **Development**: Implemented frontend functionality using React.js and styled components with CSS.
-4. **Testing**: Conducted manual testing and debugging to ensure functionality and usability.
-5. **Deployment**: Deployed the application to a hosting platform for public access.
+- **Getting Started:** The project began with thorough research into URL shortening techniques and available APIs. Initial planning involved outlining project requirements, selecting appropriate technologies, and setting up the development environment.
+- **Experience:** Developing the URL shortener project provided me with a valuable hands-on experience in frontend development using React.js. Exploring various libraries and tools, such as React-Toastify for notifications, enriched the development process.
+- **Struggles:** Challenges were encountered during API integration and handling asynchronous operations, particularly in managing state updates and displaying loading indicators. 
+- **Conclusion:** Despite the challenges, completing the project was a rewarding experience. Overcoming obstacles led to a deeper understanding of React.js concepts and frontend development best practices. 
 
 ## Learnings
 - Gain proficiency in React.js and React Hooks for frontend development.
