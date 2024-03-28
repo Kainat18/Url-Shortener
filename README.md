@@ -57,7 +57,7 @@ The URL Shortener Project is a web application designed to shorten long URLs int
 #
 
 <video width="500" height="500" controls>
-  <source src="./public/Url Shortener.mp4" type="video/mp4">
+  <source src="https://github.com/Kainat18/Url-Shortener/assets/92010815/a8a56a3f-f61c-4828-b4b9-a759f9041d14" type="video/mp4">
  
 </video>
 </details>
