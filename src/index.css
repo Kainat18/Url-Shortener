@@ -276,6 +276,7 @@ body {
   background: transparent;
   font-family: "Poppins", serif;
   margin-top: 40px;
+  
 }
 .savedUrls {
   display: flex;
@@ -285,6 +286,7 @@ body {
   background: transparent;
   padding: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+  width: 100%;
 }
 .savedUrls h2 {
   margin: 5px;
@@ -297,6 +299,11 @@ body {
 
 .savedUrls li {
   margin-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+  width: 350px;
+ 
 }
 .ClearStorage-btn {
   background: linear-gradient(
@@ -394,6 +401,10 @@ body {
   .savedUrls ul {
     font-size: 14px;
   }
+  .savedUrls li{
+    width: 300px;
+  }
+  
   .ClearStorage-btn {
     width: 170px;
     font-size: 12px;
